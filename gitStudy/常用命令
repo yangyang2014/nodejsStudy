@@ -1,0 +1,1 @@
+git reset --soft HEAD~5 将当前分支回到前面第6次的commit
