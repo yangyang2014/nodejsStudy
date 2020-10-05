@@ -25,6 +25,9 @@ unsafe.Pointer类型 指针类型 用于实现定位和读写内存的基础 可
 8、map类型
 
 ##常用语法有哪些？
+go中没有while
+如果依赖包没有使用到也会报出语法错误
+
 
 数组的声明
 var variable_name [SIZE] variable_type
@@ -35,3 +38,5 @@ score = [3]float32{100.0,2.0,3.4}
 ##go中的nil是什么？和java中的null有什么区别？
 
 ##如何实现并发？
+
+## go语言中的异常处理
