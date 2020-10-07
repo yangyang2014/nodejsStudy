@@ -4,18 +4,17 @@ import (
 	"log"
 	"net/http"
 	"strings"
-	// "html"
 )
 
-func main() {
+// func main() {
 
-	Init()
-	http.HandleFunc("/genInviteCode",  genInviteCodeHandler)
-	http.HandleFunc("/drop",  dropInviteCodeHandler)
-	log.Println("Listening...")
-	http.ListenAndServe(":8080", nil)
+// 	Init()
+// 	http.HandleFunc("/genInviteCode",  genInviteCodeHandler)
+// 	http.HandleFunc("/drop",  dropInviteCodeHandler)
+// 	log.Println("Listening...")
+// 	http.ListenAndServe(":8080", nil)
 
-}
+// }
 
 func genInviteCodeHandler(w http.ResponseWriter, r *http.Request) { 
 	inviteCode := GenInviteCode()
@@ -35,7 +34,7 @@ func dropInviteCodeHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	
-	if(strings.Compare(code,"") != 0 && strings.Count(code, "") - 1 == 6) {
+	if(len([]rune(code)) == 6) {
 		//邀请码存在且长度为6
 		info := Drop(code)
 		fmt.Fprint(w, info)
