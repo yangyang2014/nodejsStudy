@@ -11,9 +11,9 @@ exports.cache = (function () {
      * @param {*} value 缓存值
      * @param {*} ms 缓存时间 毫秒
      */
-    o.addCache = function (name, value,ms) {
+    o.addCache = function (name, value, ms) {
         //js中常用的运算符有哪些？
-        var time = ms?ms:60000;
+        var time = ms ? ms : 60000;
         var tcache = name;
         //对象后面加上中括号表示属性，支持动态访问、创建、修改、删除
         _cache[tcache] = value;
@@ -27,7 +27,7 @@ exports.cache = (function () {
      * 获取缓存的值
      * @param {*} name   
      */
-    o.getCache = function(name) {
+    o.getCache = function (name) {
         return _cache[name]
     }
 
@@ -35,7 +35,7 @@ exports.cache = (function () {
      * 删除缓存
      * @param name 待删除的缓存名称
      */
-    o.delCache = function(name){
+    o.delCache = function (name) {
         delete _cache[name];
     }
     return o;

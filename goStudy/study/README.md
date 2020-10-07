@@ -40,3 +40,47 @@ score = [3]float32{100.0,2.0,3.4}
 ##如何实现并发？
 
 ## go语言中的异常处理
+
+
+## go 中方法与函数的区别
+方法
+Func main( a, b int) (int) {
+}
+函数
+func (p myint) mysquare() int {  
+  
+}  
+
+## struct 初始化
+
+//第一种，在Go语言中，可以直接以 var 的方式声明结构体即可完成实例化
+var t T
+t.a = 1
+t.b = 2
+
+//第二种，使用 new() 实例化
+t := new(T)
+
+//第三种，使用字面量初始化
+t := T{a, b}
+t := &T{} //等效于 new(T)
+
+
+示例
+type Person struct {
+    name string
+    age int
+    address string
+}
+
+ms := &Person{"name", 20, "bj"}
+ms2 := &Person{name:"zhangsan"}
+&Person{a, b, c} 是一种简写，底层仍会调用 new()，这里值的顺序必须按照字段顺序来写，同样它也可以使用在值前面加上字段名和冒号的写法（见上文的方式B，C）
+
+## go中如何实现接口
+
+## go中的线程和协程
+多个协程可有一个或者多个线程管理，协程的调度都在其所在的线程中
+调度策略可有应用层代码定义
+执行效率高、占用内存不能小
+https://juejin.im/post/6844903662553137165
