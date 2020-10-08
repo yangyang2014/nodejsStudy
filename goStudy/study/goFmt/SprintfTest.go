@@ -6,7 +6,7 @@ import (
 )
 
 func main(){
-	var limit int = 1000000
+	var limit int = 200000000
 	// fmt.Println("sprintf ")
 	// fmt.Println(time.Now().Unix())
 	// for i:=0;i<limit;i++{
@@ -17,29 +17,30 @@ func main(){
 	// fmt.Println(time.Now().Unix())
 
 	fmt.Println("callSwitch ")
-	begintime1 := time.Now().UnixNano()
+
 	
-	// fmt.Println(time.Now().Unix())
+	fmt.Println(time.Now().Unix())
+	begintime1 := time.Now().UnixNano()
 	for i:=0;i<limit;i++{
-		// callSwitch(i)
+		callSwitch(100)
 		// fmt.Print(callSwitch(i)," ")
 	}
 	
 	// fmt.Println()
 	endtime1 := time.Now().UnixNano()
-	// fmt.Println(time.Now().Unix())
+	fmt.Println(time.Now().Unix())
 	fmt.Println(begintime1-endtime1)
 
 	fmt.Println("callForLoop ")
-	// fmt.Println(time.Now().Unix())
+	fmt.Println(time.Now().Unix())
 	begintime2 := time.Now().UnixNano()
 	for i:=0;i<limit;i++{
-		// callForLoop(i)
+		callForLoop(100)
 		// fmt.Print(callForLoop(i)," ")
 	}
 	// fmt.Println()
-	// fmt.Println(time.Now().Unix())
 	endtime2 := time.Now().UnixNano()
+	fmt.Println(time.Now().Unix())
 	fmt.Println(begintime2-endtime2)
 
 }
