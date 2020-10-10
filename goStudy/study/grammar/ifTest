@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+    //if 后的表达式可以进行变量声明，并且在所有的分支都可以使用
+    //不需要小括号 但需要大括号
+    //go中没有三元表达式
+    if num := 9; num<0 {
+        fmt.Println(num,"is negative")
+    } else if num < 10 {
+
+    } else {
+
+    }
+}

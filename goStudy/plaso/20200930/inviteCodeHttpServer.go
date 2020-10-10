@@ -24,11 +24,14 @@ func main() {
 }
 
 func genInviteCodeHandler(w http.ResponseWriter, r *http.Request) { 
+
 	inviteCode := GenInviteCode()
+	//todo 如果返回的字符串为-1 表示程序异常，需要返回错误的响应
 	res := new(JsonResult)
 	res.Code = 0
 	res.Obj = inviteCode
 	res_json,_ := json.Marshal(res)
+	w.Header().Set("content-Type", "application/json")
 	fmt.Fprint(w, string(res_json))
 }
 
@@ -55,5 +58,7 @@ func dropInviteCodeHandler(w http.ResponseWriter, r *http.Request) {
 		res.Obj = "无效的邀请码,请检查参数"
 	}
 	res_json,_ := json.Marshal(res)
+	w.Header().Set("content-Type", "application/json")
 	fmt.Fprint(w, string(res_json))
+
 }
