@@ -1,0 +1,13 @@
+{"defaultValue" : {
+    "oss":{
+        "root":"",
+        "accessKeyId": "LTAI4hbpgkC1mW8F",
+        "accessKeySecret": "cIw4ZF3OZzgSSycksITzN5dd5ELHLE",
+        "roleArn":"acs:ram::1845455964094256:role/oss-readonly-role",
+        "bucket": "file-plaso",
+        "region": "oss-cn-hangzhou",
+        "internal":true,
+        "bkpath":"http://hz-public-files.oss-cn-hangzhou-internal.aliyuncs.com/resource/upime/bgpaper/",
+    }
+}
+}
